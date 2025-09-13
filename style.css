@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+
+:root{
+    --themeRed:#e43a47;
+    --gray: #efefef;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+button,
+body {
+    font-family: "Poppins" , sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.fullcontainer {
+    width: 100%;
+}
+
+.container {
+    width: 1140px;
+    margin: auto;
+}
+
+.sectiontitle {
+    width: 300px;
+    border-bottom: 3px solid var(--themeRed);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.sectiontitle::after {
+    display: inline-block;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: var(--themeRed);
+    position: absolute;
+    left: calc(50% - 10px);
+    top:calc(75% - 7px);
+    transform: rotate(45deg) translate(50%, 50%);
+    border: 3px solid #fff;
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container .logo {
+    padding: 5px 0;
+    height: 75px;
+    margin-left: -120px;
+}
+
+header .container .logo img {
+    height:100%;
+    border-radius: 50px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin-left: 450px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: var(--themeRed);
+}
+
+.banner {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("./img/home_page.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.banner h1 {
+    margin-top: 350px;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    width: 50%;
+    line-height: 4.2rem;
+    font-weight: 450;
+    margin-left: -110px;
+}
+
+.banner h1 span {
+    background-color: var(--themeRed);
+    display: inline-block;
+    line-height: 3.5rem;
+    padding: 0 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.banner p {
+    color: #fff;
+    width: 50%;
+    text-shadow: 0 0 2px #000;
+    margin-left: -110px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.banner button {
+    background-color: var(--themeRed);
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 15px;
+    border-radius: 3px;
+    font-weight: 600;
+    margin-left: -110px;
+}
+
+.banner button:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+
+#aboutsection button,
+#oldage button {
+    background-color: var(--themeRed);
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 15px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+#aboutsection .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 45px;
+    position: relative;
+    height: 245px;
+}
+
+#aboutsection .cards >div{
+    width: 350px;
+    background-color: var(--gray);
+    padding: 35px;
+    color: #444;
+    text-align: center;
+    border-radius: 5px;
+    height: 250px;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+}
+
+#aboutsection .cards >div .title{
+    margin-top: -10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#aboutsection .cards > div img{
+    height: 120px; 
+    width: 250px; 
+    margin: 10px; 
+    border-radius: 5px;
+}
+
+#aboutsection .cards > div button{
+    background-color: #e43a47; 
+    color: #fff; 
+    border: 0; 
+    padding: 10px 15px; 
+    font-size: 10px; 
+    font-weight: 600; 
+    border-radius: 3px; 
+    margin-top: -15px;
+}
+
+#aboutsection .cards > div button:hover{
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+
+#aboutsection .cards > div:hover {
+    width: 400px;
+    margin-top: -20px;
+    border-color: var(--themeRed);
+    padding: 55px;
+    height: auto;
+}
+
+#oldage {
+    background-color: #e2e2e2;
+}
+
+#oldage .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 45px;
+    position: relative;
+    height: 245px;
+}
+
+#oldage .cards >div{
+    width: 350px;
+    background-color: var(--gray);
+    padding: 35px;
+    color: #444;
+    text-align: center;
+    border-radius: 5px;
+    height: 250px;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+}
+
+#oldage .cards >div .title{
+    margin-top: -10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#oldage .cards > div img{
+    height: 120px; 
+    width: 250px; 
+    margin: 10px; 
+    border-radius: 5px;
+}
+
+#oldage .cards > div button{
+    background-color: #e43a47; 
+    color: #fff; 
+    border: 0; 
+    padding: 10px 15px; 
+    font-size: 10px; 
+    font-weight: 600; 
+    border-radius: 3px; 
+    margin-top: -15px;
+}
+
+#oldage .cards > div button:hover{
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+
+#oldage .cards > div:hover {
+    width: 400px;
+    margin-top: -20px;
+    border-color: var(--themeRed);
+    padding: 55px;
+    height: auto;
+}
+
+#Education {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+} 
+#Education .cards > div button{
+    background-color: #e43a47; 
+    color: #fff; 
+    border: 0; 
+    padding: 10px 15px; 
+    font-size: 10px; 
+    font-weight: 600; 
+    border-radius: 3px; 
+    margin-top: -15px;
+}
+#Education .cards > div img{
+    height: 120px; 
+    width: 250px; 
+    margin: 10px; 
+    border-radius: 5px;
+}
+#Education .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 45px;
+    position: relative;
+    height: 245px;
+}
+
+#Education .cards >div{
+    width: 350px;
+    background-color: var(--gray);
+    padding: 35px;
+    color: #444;
+    text-align: center;
+    border-radius: 5px;
+    height: 250px;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+}
+
+#Education .cards >div .title{
+    margin-top: -10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#Education .cards > div button:hover{
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+
+#Education .cards > div:hover {
+    width: 400px;
+    margin-top: -20px;
+    border-color: var(--themeRed);
+    padding: 55px;
+    height: auto;
+}
+
+.Gallery {
+    background-color: var(--gray);
+}
+
+.Gallery .gallerycontainer{
+    column-count: 4;
+    column-gap: 20px;
+}
+
+.Gallery .gallerycontainer .item {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.Gallery .gallerycontainer img {
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+.Gallery .gallerycontainer .title {
+    position: absolute;
+    background-color: var(--gray);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+.Gallery .gallerycontainer .item:hover .title{
+    opacity: 1;
+}
+.Gallery .gallerycontainer .item:hover img{
+    transform: scale(1.2);
+}
+
+.Gallery .gallerycontainer {
+    column-count: 4;
+    column-gap: 20px;
+}
+
+
+.join {
+    background-color: rgb(239,124,0);
+    color: #fff;
+}
+
+.join .jointitle {
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.join .jointitle span {
+    font-weight: 800;
+}
+
+.join button {
+    padding: 7px 15px;
+    margin-top: 20px;
+    border: 0;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.join button.joinnow {
+    margin-right: 10px;
+    background-color: #424242;
+    color: #fff;
+}
+
+.join button.donatebtn {
+    background-color: var(--gray);
+}
+
+footer {
+    background-color: #181818;
+    color: #7f7f7f;
+    padding: 50px 0;
+    font-size: 14px;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+
+footer .title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    margin-bottom: 30px;
+    padding: 0 0 5px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .linkscontainer ul {
+    list-style-type: none;
+
+}
+
+footer .linkscontainer ul li a {
+    text-decoration: none;
+    color: #7f7f7f;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .newslettercontainer img {
+    height: 100px;
+    margin-bottom: 11px;
+    border-radius: 50px;
+}
+
+footer .newslettercontainer input {
+    background-color: transparent;
+    border: 1px solid #7f7f7f;
+    outline: none;
+    padding: 10px 15px;
+    width: 100%;
+    margin-top: 10px;
+    color: #ccc;
+    border-radius: 30px;
+}
+
+@media screen and (max-width:1140px) {
+    .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .banner h1 {
+        margin-top: 200px;
+    }
+    #aboutsection .cards {
+        justify-content: space-around;
+        height: auto;
+    }
+    #aboutsection .cards > div {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .banner {
+        background-position: 45%;
+    }
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    .Edu .boxcontainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:768px) {
+    header nav {
+        position: relative;
+        border: 2px solid #fff;
+        height: 30px;
+        width: 30px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+    header nav:after{
+        top: 17px;
+    }
+    header nav:before{
+        top: 7px;
+    }
+    header nav:after, header nav:before{
+        content: "";
+        height: 2px;
+        width: 17px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        left: 5px;
+    }
+
+    header nav ul{
+        position: absolute;
+        right: -400px;
+        top: 53px;
+        transition: 0.5s;
+    }
+
+    header nav:hover ul {
+        right: 0;
+    }
+
+    header nav ul li {
+        display: block;
+    }
+
+    header nav ul li a {
+        width: 300px;
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .banner {
+        background-position-x: 65%;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    .banner p,
+    .banner h1 {
+        width: 70%;
+    }
+
+    #aboutsection .cards > div:hover {
+        width: 350px;
+    }
+}

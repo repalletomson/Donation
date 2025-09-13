@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizations Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+            text-transform: uppercase;
+        }
+        tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Organizations</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Organization Name</th>
+            <th>Funding Amount</th>
+        </tr>
+    </thead>
+    <tbody id="organizations-table-body">
+        <!-- Data will be inserted here by JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    async function fetchOrganizations() {
+    try {
+        const response = await fetch('http://localhost:3000/api/organizations');
+        const data = await response.json();
+        const tableBody = document.getElementById('organizations-table-body');
+        data.forEach(organization => {
+            const row = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            const amountCell = document.createElement('td');
+            nameCell.textContent = organization.org_name;
+            amountCell.textContent = organization.fund_amount;
+            row.appendChild(nameCell);
+            row.appendChild(amountCell);
+            tableBody.appendChild(row);
+        });
+    } catch (error) {
+        console.error('Error fetching organizations:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', fetchOrganizations);
+
+</script>
+
+</body>
+</html>
